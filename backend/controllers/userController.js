@@ -2,6 +2,7 @@ const { User } = require("../dbConfig/models");
 
 exports.createUser = async (req, res) => {
   try {
+    console.log("dsfghj", req.body);
     const { userName, email, password, image, confirmPassword } = req.body;
     if (password !== confirmPassword) {
       return res
